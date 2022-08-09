@@ -15,7 +15,7 @@ public class QuestionService {
     @Autowired
     QuestionRepository questionRepository;
 
-    public Question addQuestion (Question question) {
+    public Question addQuestion(Question question) {
         return questionRepository.save(question);
     }
 
