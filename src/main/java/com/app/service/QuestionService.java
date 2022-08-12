@@ -19,15 +19,19 @@ public class QuestionService {
         return questionRepository.save(question);
     }
 
-    public List<Question> getSubjectQuestion(String subject) {
-        return questionRepository.findBySubject(subject);
-    }
-
     public List<String> subjects() {
         return questionRepository.getAllSubject();
     }
 
     public List<String> topics(String subject) {
         return questionRepository.getAllTopic(subject);
+    }
+
+    public List<Question> getQuestionsBasedOnSubject(String subject) {
+        return questionRepository.findBySubject(subject);
+    }
+
+    public List<Question> getQuestionsBasedOnSubjectAndTopic(String subject, String topic) {
+        return questionRepository.findBySubjectAndTopic(subject , topic);
     }
 }

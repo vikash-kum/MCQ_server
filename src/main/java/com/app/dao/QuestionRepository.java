@@ -10,9 +10,7 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Integer> {
 
-    List<Question> findByTopic(String topic);
-
-    List<Question> findBySubjectAndTopic(String subject, String topic);
+   List<Question> findBySubjectAndTopic(String subject, String topic);
 
     @Query("select distinct subject from Question")
     List<String> getAllSubject();
