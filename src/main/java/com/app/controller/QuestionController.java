@@ -25,7 +25,6 @@ public class QuestionController {
     // Sending all Topic based on subject
     @GetMapping("/{subject}/topic")
     public List<String> getTopic(@PathVariable("subject") String subject) {
-        System.out.println("Hello");
         return questionService.topics(subject);
     }
 

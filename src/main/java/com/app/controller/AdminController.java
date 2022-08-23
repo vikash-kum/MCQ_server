@@ -16,7 +16,6 @@ public class AdminController {
         // Adding question
         @PostMapping("/addquestion")
         Question addQuestion(@ModelAttribute Question question) {
-            System.out.println(question);
             return questionService.addQuestion(question);
         }
 }
